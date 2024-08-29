@@ -12,7 +12,7 @@ let userSchema = Schema(
             type: mongoose.Types.ObjectId,
             ref: 'Organizer',
             required: true,
-          },
+        },
     },
     { timestamps: true }
 )
