@@ -4,7 +4,7 @@
 **Get All Categories**
 url: /api/v1/cms/categories
 auth: **Token Organizer**
-```
+```js
     {
         "_id": "66d0068e67e26e909e252dce",
         "name": "Seminar",
@@ -18,7 +18,7 @@ auth: **Token Organizer**
 **Get One Categories**
 url: /api/v1/cms/categories/:id
 auth: **Token Organizer**
-```
+```js
     "data": {
         "_id": "62cfe59890e64e9e644d3fb9",
         "name": "Olahraga",
@@ -34,14 +34,14 @@ url: /api/v1/cms/categories/:id
 auth: **Token Organizer**
 
 body
-```
+```js
     {
         name: "Kategori"
     }
 ```
 
 response
-```
+```js
     "data": {
         "name": "Bootcamp",
         "organizer": "62cfe35e8ad11e7a5e240f26",
@@ -65,7 +65,7 @@ auth: **Token Organizer**
 url: /api/v1/cms/events
 params: ``{ keyword, category, talent, status }``
 auth: **Token Organizer**
-```
+```js
     "data": [
         {
             "_id": "62cfeacaa7c00d1978e1530f",
@@ -122,7 +122,7 @@ auth: **Token Organizer**
 **Get One Events**
 url: /api/v1/cms/events/:id
 auth: **Token Organizer**
-```
+```js
     "data": {
         "_id": "62cfe59890e64e9e644d3fb9",
         "name": "Olahraga",
@@ -138,7 +138,7 @@ url: /api/v1/cms/events/:id
 auth: **Token Organizer**
 
 body
-```
+```js
     {
         "title": "React",
         "date": "2024/08/16 08:00:00",
@@ -168,7 +168,7 @@ body
 ```
 
 response
-```
+```js
     "data": {
         "title": "Flutter",
         "date": "2024-08-16T01:00:00.000Z",
@@ -212,7 +212,7 @@ url: /api/v1/cms/events/{id}/status
 auth: **Token Organizer**
 
 body
-```
+```js
     {
         statusEvents: ['Published', 'Draft']
     }
