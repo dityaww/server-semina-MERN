@@ -24,10 +24,31 @@ const otpMail = async (email, data) => {
       html: Mustache.render(template, data),
     };
 
+    console.log(template, data);
+
     return await transporter.sendMail(message);
   } catch (ex) {
     console.log(ex);
   }
 };
 
-module.exports = { otpMail };
+const invoiceMail = async (email, data) => {
+  try {
+    let template = fs.readFileSync('app/views/email/invoice.html', 'utf8');
+
+    let message = {
+      from: gmail,
+      to: email,
+      subject: 'Your Invoice: ',
+      html: Mustache.render(template, data),
+    };
+
+    console.log(template, data);
+
+    return await transporter.sendMail(message);
+  } catch (ex) {
+    console.log(ex);
+  }
+};
+
+module.exports = { otpMail, invoiceMail };
