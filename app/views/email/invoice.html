@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex flex-col justify-center mx-40">
+        <div class="flex justify-between w-full">
+            <div class="flex items-center">
+                <h1 class="font-bold text-blue-700 text-2xl">Semina</h1>
+            </div>
+            <div class="flex divide-x-2">
+                <div class="pr-2">
+                    <p class="text-gray-500 text-sm">Date</p>
+                    <p class="font-sans font-semibold">{{ date }}</p>
+                </div>
+                <div class="pl-2">
+                    <p class="text-gray-500 text-sm">Id Invoice</p>
+                    <p class="font-sans font-semibold">{{ _id }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6">
+            <h3 class="text-lg text-gray-700 font-semibold mb-2">Personal Detail</h3>
+            <div class="flex gap-5">
+                <div class="">
+                    <p class="text-sm">First Name</p>
+                    <p>{{ personalDetail.firstName }}</p>
+                </div>
+                <div class="">
+                    <p class="text-sm">Last Name</p>
+                    <p>{{ personalDetail.lastName }}</p>
+                </div>
+                <div class="">
+                    <p class="text-sm">Email</p>
+                    <p>{{ personalDetail.email }}</p>
+                </div>   
+                <div class="">
+                    <p class="text-sm">Role</p>
+                    <p>{{ personalDetail.role }}</p>
+                </div>   
+            </div>
+        </div>
+
+        <table class="mt-6">
+            <thead>
+                <tr class="bg-gray-500">
+                    <td class="font-bold p-2 text-white">#</td>
+                    <td class="font-bold p-2 text-white">Name</td>
+                    <td class="font-bold p-2 text-white text-center">Qty</td>
+                    <td class="font-bold p-2 text-white text-center">Price</td>
+                </tr>
+            </thead>
+            <tbody class="bg-gray-200">
+                <tr>
+                    <td class="p-2">1</td>
+                    <td class="p-2">Produk angsa</td>
+                    <td class="text-center p-2">3</td>
+                    <td class="text-center p-2">10000</td>
+                </tr>
+                <tr>
+                    <td class="p-2">1</td>
+                    <td class="p-2">Produk angsa</td>
+                    <td class="text-center p-2">3</td>
+                    <td class="text-center p-2">10000</td>
+                </tr>
+                <tr>
+                    <td class="p-2">1</td>
+                    <td class="p-2">Produk angsa</td>
+                    <td class="text-center p-2">3</td>
+                    <td class="text-center p-2">10000</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="7" class="text-right py-2 text-gray-500 font-normal text-md">Total Order Ticket: <span class="font-bold">{{ totalOrderTicket }} pcs</span></td>
+                </tr>
+                <tr>
+                    <td colspan="7" class="text-right py-2 text-gray-500 font-normal text-md">Total: <span class="font-bold">{{ totalPay }}</span></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="">
+            <h3 class="text-lg text-gray-700 font-semibold mb-2">Notes</h3>
+            <p class="italic">Thanks for your order.</p>    
+        </div>
+    </div>
+</body>
+</html>
